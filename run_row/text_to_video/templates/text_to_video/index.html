@@ -1,18 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>run_row</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'text_to_video/css/style.css' %}">
+
 </head>
 <body>
+<div class="contaner">
 <form action="" method="post">
     {% csrf_token %}
+<div class="ex">
     {% for dict in data %}
-        <label for="{{ dict.name }}">{{ dict.label }}</label><br>
-        <input type="text" id="{{ dict.name }}" name="{{ dict.name }}" placeholder="{{ dict.place }}"><br>
+    <div class="row">
+        <div class="text">
+            <label for="{{ dict.name }}">{{ dict.label }}</label>
+        </div>
+        <input type="text" id="{{ dict.name }}" name="{{ dict.name }}" placeholder="{{ dict.place }}" class="input">
+    </div>
     {% endfor %}
-          <button type="submit">Скачать видео</button>
+</div>
+<div class="button_pos">
+    <button type="submit" class="button">Скачать видео</button>
+</div>
 
-      </form>
+    </form>
+</div>
 </body>
 </html>

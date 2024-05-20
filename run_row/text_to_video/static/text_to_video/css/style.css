@@ -1,0 +1,82 @@
+.contaner{
+    background: rgb(235,60,198);
+    background: linear-gradient(180deg, rgba(235,60,198,1) 6%, rgba(219,128,128,1) 49%);
+    width: 18cm;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1cm;
+    padding-top: 1cm;
+    margin-top: 1cm;
+}
+
+.ex {
+    display: flex;
+    flex-direction: column;
+    width: 13cm;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5cm;
+}
+
+.row {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 0.3cm;
+    padding-bottom: 0.3cm;
+    padding-left: 1cm;
+    margin-bottom: 0.3cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    border-radius: 10px;
+}
+
+.text {
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.input{
+    width: 4cm;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 1cm;
+}
+
+.button_pos {
+    width: 60%;
+    height: 1.5cm;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1cm;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5cm;
+    background: linear-gradient(90deg,rgba(255,0,142,0.1), rgba(0,255,243,0.1));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0,0,0,0.7);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: linear-gradient(90deg,rgba(250,0,142,0.3), rgba(0,255,243,0.2));
+    color: rgba(0,0,0,0.9);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: rgb(235,60,198);
+    background: linear-gradient(180deg, rgba(235,60,198,0.8) 6%, rgba(219,128,128,1) 49%);
+}
+
+
