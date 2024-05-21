@@ -76,7 +76,7 @@ def text_to_video(text: str,
     image_w = full_image.get_width()
     all_length = image_w + 2 * size[0]
     count_images = ceil(__fps * time_)
-    offset = int(all_length / count_images)
+    offset = all_length / count_images
 
     # create image strip to video
     images = []
