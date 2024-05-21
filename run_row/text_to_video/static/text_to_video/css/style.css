@@ -1,13 +1,35 @@
+.split {
+    display: flex;
+}
+
+.head {
+    color: white;
+    width: 60%;
+    height: auto;
+    min-height: 3cm;
+    border-radius: 0.5cm;
+    margin: auto;
+    background-color: rgba(235,60,198,0.5);
+    text-align: center;
+}
+
 .contaner{
     background: rgb(235,60,198);
     background: linear-gradient(180deg, rgba(235,60,198,1) 6%, rgba(219,128,128,1) 49%);
     width: 18cm;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border-radius: 1cm;
     padding-top: 1cm;
     margin-top: 1cm;
+}
+
+.info {
+    width: 15cm;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    font-size: 20px;
+    margin: auto;
 }
 
 .ex {
@@ -79,4 +101,12 @@ body {
     background: linear-gradient(180deg, rgba(235,60,198,0.8) 6%, rgba(219,128,128,1) 49%);
 }
 
-
+.footer {
+    width: 95%;
+    height: 1cm;
+    text-align: right;
+    padding-top: 0.5cm;
+    padding-right: 5%;
+    margin-top: 0.5cm;
+    color: rgba(255, 255,255, 0.5)
+}
