@@ -1,6 +1,7 @@
 from math import ceil
 
 from .settings import TEMP_VIDEO_PATH, VIDEO_FPS
+from .settings import MAX_TIME, MAX_SIZE, MAX_LEN
 from pygame import font, Surface, surfarray
 import pygame as pg
 import cv2
@@ -97,3 +98,11 @@ def text_to_video(text: str,
     video.release()
 
     return {'video_path': path, 'video_data': video_data}
+
+
+description = f'''На данный момент количество символов ограничено и составляет {MAX_LEN} максимум
+Максимальное разрешение видео {MAX_SIZE} на {MAX_SIZE}. Все что меньше - доступно (кроме отрицательных и нулей) как по вертикали так и по горизонтали
+Цвет текста и цвет фона - RGB, значения следует писать через запятую
+Длина видео ограничена {MAX_TIME} секундами
+
+При вводе неккоректных данных будут использоваться параметры по умолчанию'''

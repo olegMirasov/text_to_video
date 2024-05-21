@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse, FileResponse
 
 from .settings import MAX_SIZE, MAX_COL, MAX_LEN, MAX_TIME
-from .text_worker import text_to_video
+from .text_worker import text_to_video, description
 from .models import History
 
 import os
@@ -17,7 +17,7 @@ for n, l, p in zip(_names, _labels, _placeholders):
     temp = {'name': n, 'label': l, 'place': p}
     form_data.append(temp)
 
-use_data = {'data': form_data}
+use_data = {'data': form_data, 'description': description}
 
 
 def __tuple_for_video(text: str, count: int, mi: int = 0, ma: int = 255) -> tuple | None:

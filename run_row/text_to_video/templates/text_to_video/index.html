@@ -9,24 +9,37 @@
 
 </head>
 <body>
-<div class="contaner">
-<form action="" method="post">
-    {% csrf_token %}
-<div class="ex">
-    {% for dict in data %}
-    <div class="row">
-        <div class="text">
-            <label for="{{ dict.name }}">{{ dict.label }}</label>
-        </div>
-        <input type="text" id="{{ dict.name }}" name="{{ dict.name }}" placeholder="{{ dict.place }}" class="input">
+    <div class="head">
+        <h1>ВИДЕО СТРОКА</h1>
+        <h2>напиши текст и скачай видео бегущей строки, выбирай цвет текста и фона</h2>
     </div>
-    {% endfor %}
-</div>
-<div class="button_pos">
-    <button type="submit" class="button">Скачать видео</button>
-</div>
 
-    </form>
+<div class="split">
+    <div class="contaner">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="ex">
+            {% for dict in data %}
+            <div class="row">
+                <div class="text">
+                    <label for="{{ dict.name }}">{{ dict.label }}</label>
+                </div>
+                <input type="text" id="{{ dict.name }}" name="{{ dict.name }}" placeholder="{{ dict.place }}" class="input">
+            </div>
+            {% endfor %}
+        </div>
+    <div class="button_pos">
+        <button type="submit" class="button">Скачать видео</button>
+    </div>
+
+        </form>
+    </div>
+        <div class="info">
+            <p>{{ description|linebreaks }}</p>
+        </div>
+</div>
+<div class="footer">
+    <p>Специально для IT-Solution. Выполнил О.И. Мирасов</p>
 </div>
 </body>
 </html>
