@@ -48,7 +48,7 @@ def _prepare_data(data: dict) -> dict:
     text = data['text']
     text = text[:MAX_LEN] if text else ' '
 
-    size = __tuple_for_video(text=data['size'], count=2, ma=MAX_SIZE)
+    size = __tuple_for_video(text=data['size'], count=2, mi=10, ma=MAX_SIZE)
     color = __tuple_for_video(text=data['color'], count=3, ma=MAX_COL)
     bg_color = __tuple_for_video(text=data['bg_color'], count=3, ma=MAX_COL)
     time_ = __tuple_for_video(data['time_'], count=1, ma=MAX_TIME)
