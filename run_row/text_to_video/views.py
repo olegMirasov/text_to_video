@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse, FileResponse
+from django.http import HttpRequest, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 from .settings import MAX_SIZE, MAX_COL, MAX_LEN, MAX_TIME
 from .text_worker import text_to_video, description
@@ -66,6 +67,7 @@ def _add_history(data: dict) -> None:
     History.objects.create(**data)
 
 
+@csrf_exempt
 def index(request: HttpRequest):
     if request.method == 'GET':
         return render(request, 'text_to_video/index.html', use_data)
